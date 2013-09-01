@@ -41,16 +41,12 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 
 /* LAYOUT STYLES */
 body {
   font-size: 15px;
   line-height: 1.5; 
-  background: #fafafa url(../images/body-bg.jpg) 0 0 repeat;
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-weight: 400;
   color: #666;
@@ -64,11 +60,14 @@ a:hover {
 }
 
 header {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 12px;
+  padding-bottom: 10px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
   border-bottom: solid 1px #275da1;
+  width: 87%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header h1 {
@@ -198,21 +197,6 @@ hr {
   padding-bottom: 1em;
   border: none;
   background: transparent url('../images/hr.png') 0 0 no-repeat;
-}
-
-table {
-  width: 100%;
-  border: 1px solid #ebebeb;
-}
-
-th {
-  font-weight: 500;
-}
-
-td {
-  border: 1px solid #ebebeb;
-  text-align: center; 
-  font-weight: 300;
 }
 
 form {
