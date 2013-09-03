@@ -1,6 +1,12 @@
 @blue: #C1DEE6;
-@tdHeight: 25px;
-@tdWeight: 20px;
+@tdHeight: 15px;
+@tdWeight: 15px;
+
+.base-map-td (@height: @tdHeight) {
+  height: @height;
+  line-height: @height;
+  overflow: hidden;
+}
 
 body {
   background-color: @blue;
@@ -12,14 +18,20 @@ body {
   margin-right: auto;
 }
 
+.base-map tr {
+  .base-map-td(17px);
+
+}
+
 .base-map td {
-  height: @tdHeight;
   width: @tdWeight;
   background-color: @blue;
+  .base-map-td;
 }
 
 .base-map div {
-  display: none;
+  visibility: hidden;
+  .base-map-td;
 }
 
 .snake {

@@ -22,7 +22,7 @@
 
 
 (function() {
-  var BOTTOM, Item, LEFT, RIGHT, Snake, SnakeView, TOP, snakeLen, speed, speedLevel, _ref, _ref1, _ref2,
+  var Item, Snake, SnakeView, map, snakeLen, speed, speedLevel, _ref, _ref1, _ref2,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -32,13 +32,26 @@
 
   speedLevel = "slow";
 
-  LEFT = 0;
+  map = "table.base-map>tbody";
 
-  BOTTOM = 1;
+  $.extend({
+    reverseDom: function(oldDomList) {
+      var arr, len, newDomList;
+      arr = oldDomList.toArray();
+      len = arr.length;
+      newDomList = [];
+      while (len--) {
+        newDomList.push(arr[len]);
+      }
+      return $(newDomList);
+    }
+  });
 
-  RIGHT = 2;
-
-  TOP = 3;
+  $.fn.extend({
+    getRealRoad: function() {
+      return $(this).filter(":gt(0)");
+    }
+  });
 
   Item = (function(_super) {
     __extends(Item, _super);
@@ -66,60 +79,6 @@
 
   })(Backbone.Collection);
 
-  $.extend({
-    move: function(index, item) {
-      var newItemNum;
-      if ($(item).hasClass("item0")) {
-        return $(item).hide(speedLevel, function() {
-          return $(this).removeClass().removeData("item");
-        });
-      } else {
-        newItemNum = $(item).data("item") - 1;
-        return $(item).removeClass().addClass("snake item" + newItemNum).data("item", newItemNum);
-      }
-    },
-    reverseDom: function(oldDomList) {
-      var arr, len, newDomList;
-      arr = oldDomList.toArray();
-      len = arr.length;
-      newDomList = [];
-      while (len--) {
-        newDomList.push(arr[len]);
-      }
-      return $(newDomList);
-    }
-  });
-
-  $.fn.extend({
-    createSnake: function(len) {
-      var count, itemNum, _results;
-      count = 1;
-      _results = [];
-      while (len--) {
-        itemNum = snakeLen - count++;
-        _results.push($(this).eq(len).find("div").addClass("item" + itemNum + " snake").data("item", itemNum).show());
-      }
-      return _results;
-    },
-    moveSnake: function() {
-      return $(this).find("div.snake").each(function(i, item) {
-        return $.move(i, item);
-      });
-    },
-    findSnakeHead: function() {
-      return $(this).find("div.item" + (snakeLen - 1)).closest("td");
-    },
-    createSnakeHead: function() {
-      return $(this).find("div").addClass("snake item" + snakeLen).data("item", snakeLen).show();
-    },
-    filterSnakeBody: function() {
-      return $(this).filter(":lt(" + ($(this).size() - 1) + ")");
-    },
-    findSnakeItemCount: function() {
-      return $(this).find("div.snake").size();
-    }
-  });
-
   SnakeView = (function(_super) {
     __extends(SnakeView, _super);
 
@@ -133,14 +92,14 @@
     SnakeView.prototype.className = "snake";
 
     SnakeView.prototype.initialize = function() {
-      var len;
-      _.bindAll(this, "render", "moveLeft", "moveBottom");
-      this.direction = LEFT;
-      this.$tblMap = $("table.base-map>tbody");
-      this.$leftRoad = this.$tblMap.find("tr:first>td");
-      this.$bottomRoad = this.$tblMap.find("tr").find("td:last");
-      this.$rightRoad = $.reverseDom(this.$tblMap.find("tr:last>td"));
-      this.$topRoad = $.reverseDom(this.$tblMap.find("tr").find("td:first"));
+      var $bottomRoad, $leftRoad, $rightRoad, $tblMap, $topRoad, len;
+      _.bindAll(this, "render", "move", "letsgo");
+      $tblMap = $(map);
+      $leftRoad = $tblMap.find("tr:first>td").getRealRoad();
+      $bottomRoad = $tblMap.find("tr").find("td:last").getRealRoad();
+      $rightRoad = $.reverseDom($tblMap.find("tr:last>td")).getRealRoad();
+      $topRoad = $.reverseDom($tblMap.find("tr").find("td:first")).getRealRoad();
+      this.$road = $.merge($.merge($.merge($leftRoad, $bottomRoad), $rightRoad), $topRoad);
       len = snakeLen;
       this.collection = new Snake();
       while (len--) {
@@ -150,79 +109,43 @@
     };
 
     SnakeView.prototype.render = function() {
-      return this.$leftRoad.createSnake(snakeLen);
+      var len, _results;
+      len = this.collection.length;
+      _results = [];
+      while (len--) {
+        _results.push(this.$road.eq(len).find("div").addClass("item" + len + " snake").data("item", len).css("visibility", "visible"));
+      }
+      return _results;
     };
 
-    SnakeView.prototype.moveCtrl = function() {
-      if (this.direction === LEFT) {
-        return this.moveLeft();
-      } else if (this.direction === BOTTOM) {
-        return this.moveBottom();
-      } else if (this.direction === RIGHT) {
-        return this.moveRight();
-      } else if (this.direction === TOP) {
-        return this.moveTop();
-      }
+    SnakeView.prototype.letsgo = function() {
+      var move;
+      move = this.move;
+      return setInterval(function() {
+        return move();
+      }, speed);
     };
 
-    SnakeView.prototype.moveLeft = function() {
-      var $newHeadTd, $oldHeadTd;
-      if (this.$topRoad.findSnakeItemCount()) {
-        this.$topRoad.filterSnakeBody().moveSnake();
-      }
-      $oldHeadTd = this.$leftRoad.findSnakeHead();
-      $newHeadTd = $oldHeadTd.next();
-      $newHeadTd.createSnakeHead();
-      this.$leftRoad.moveSnake();
-      if (!$newHeadTd.size()) {
-        this.direction = BOTTOM;
-        return this.$bottomRoad.createSnake(2);
-      }
-    };
-
-    SnakeView.prototype.moveBottom = function() {
-      var $newHeadTd, $oldHeadTd;
-      if (this.$leftRoad.findSnakeItemCount()) {
-        this.$leftRoad.filterSnakeBody().moveSnake();
-      }
-      $oldHeadTd = this.$bottomRoad.findSnakeHead();
-      $newHeadTd = $oldHeadTd.closest("tr").next().find("td:last");
-      $newHeadTd.createSnakeHead();
-      this.$bottomRoad.moveSnake();
-      if (!$newHeadTd.size()) {
-        this.direction = RIGHT;
-        return this.$rightRoad.createSnake(2);
-      }
-    };
-
-    SnakeView.prototype.moveRight = function() {
-      var $newHeadTd, $oldHeadTd;
-      if (this.$bottomRoad.findSnakeItemCount()) {
-        this.$bottomRoad.filterSnakeBody().moveSnake();
-      }
-      $oldHeadTd = this.$rightRoad.findSnakeHead();
-      $newHeadTd = $oldHeadTd.prev();
-      $newHeadTd.createSnakeHead();
-      this.$rightRoad.moveSnake();
-      if (!$newHeadTd.size()) {
-        this.direction = TOP;
-        return this.$topRoad.createSnake(2);
-      }
-    };
-
-    SnakeView.prototype.moveTop = function() {
-      var $newHeadTd, $oldHeadTd;
-      if (this.$rightRoad.findSnakeItemCount()) {
-        this.$rightRoad.filterSnakeBody().moveSnake();
-      }
-      $oldHeadTd = this.$topRoad.findSnakeHead();
-      $newHeadTd = $oldHeadTd.closest("tr").prev().find("td:first");
-      $newHeadTd.createSnakeHead();
-      this.$topRoad.moveSnake();
-      if (!$newHeadTd.size()) {
-        this.direction = LEFT;
-        return this.$leftRoad.createSnake(2);
-      }
+    SnakeView.prototype.move = function() {
+      var $newHead, $oldHead, oldIndex;
+      $oldHead = this.$road.find("div.item" + (this.collection.length - 1)).parent();
+      oldIndex = this.$road.index($oldHead);
+      $newHead = this.$road.eq(oldIndex + 1);
+      $newHead.find("div").addClass("snake item" + this.collection.length).data("item", this.collection.length).css("visibility", "visible");
+      return this.$road.find("div.snake").each(function() {
+        var newItemNum;
+        if ($(this).hasClass("item0")) {
+          return $(this).hide(speedLevel, function() {
+            return $(this).css({
+              "visibility": "hide",
+              "display": "block"
+            }).removeClass().removeData("item");
+          });
+        } else {
+          newItemNum = $(this).data("item") - 1;
+          return $(this).removeClass().addClass("snake item" + newItemNum).data("item", newItemNum);
+        }
+      });
     };
 
     return SnakeView;
@@ -232,9 +155,7 @@
   $(document).ready(function() {
     var view;
     view = new SnakeView();
-    return window.setInterval(function() {
-      return view.moveCtrl();
-    }, speed);
+    return view.letsgo();
   });
 
 }).call(this);

@@ -23,9 +23,9 @@
 
   tblWeight = 68;
 
-  tdHt = 36;
+  tdHt = 30;
 
-  tdWt = 25;
+  tdWt = 20;
 
   $.fn.extend({
     createMap: function(height, weight) {

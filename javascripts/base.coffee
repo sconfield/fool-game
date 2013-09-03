@@ -15,8 +15,8 @@
 ###
 tblHeight = 21
 tblWeight = 68
-tdHt = 36
-tdWt = 25
+tdHt = 30
+tdWt = 20
 
 $.fn.extend
   createMap: (height, weight) ->

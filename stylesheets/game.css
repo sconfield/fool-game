@@ -1,1 +1,82 @@
-body{background-color:#c1dee6}.base-map{margin-left:auto;margin-right:auto}.base-map td{height:25px;width:20px;background-color:#c1dee6}.base-map div{display:none}.snake{border:1px solid greenyellow}.item17{background-color:#941c13}.item16{background-color:#a61f15}.item15{background-color:#b82218}.item14{background-color:#ca261a}.item13{background-color:#d4281b}.item12{background-color:#e22e21}.item11{background-color:#e43f34}.item10{background-color:#e65046}.item9{background-color:#e96158}.item8{background-color:#eb726a}.item7{background-color:#ed837c}.item6{background-color:#f0948e}.item5{background-color:#f2a5a0}.item4{background-color:#f4b6b2}.item3{background-color:#f7c7c4}.item2{background-color:#f9d8d6}.item1{background-color:#fce9e8}.item0{background-color:#fefafa}
+body {
+  background-color: #c1dee6;
+}
+.base-map {
+  margin-left: auto;
+  margin-right: auto;
+}
+.base-map tr {
+  height: 17px;
+  line-height: 17px;
+  overflow: hidden;
+}
+.base-map td {
+  width: 15px;
+  background-color: #c1dee6;
+  height: 15px;
+  line-height: 15px;
+  overflow: hidden;
+}
+.base-map div {
+  visibility: hidden;
+  height: 15px;
+  line-height: 15px;
+  overflow: hidden;
+}
+.snake {
+  border: 1px solid greenyellow;
+}
+.item17 {
+  background-color: #941c13;
+}
+.item16 {
+  background-color: #a61f15;
+}
+.item15 {
+  background-color: #b82218;
+}
+.item14 {
+  background-color: #ca261a;
+}
+.item13 {
+  background-color: #d4281b;
+}
+.item12 {
+  background-color: #e22e21;
+}
+.item11 {
+  background-color: #e43f34;
+}
+.item10 {
+  background-color: #e65046;
+}
+.item9 {
+  background-color: #e96158;
+}
+.item8 {
+  background-color: #eb726a;
+}
+.item7 {
+  background-color: #ed837c;
+}
+.item6 {
+  background-color: #f0948e;
+}
+.item5 {
+  background-color: #f2a5a0;
+}
+.item4 {
+  background-color: #f4b6b2;
+}
+.item3 {
+  background-color: #f7c7c4;
+}
+.item2 {
+  background-color: #f9d8d6;
+}
+.item1 {
+  background-color: #fce9e8;
+}
+.item0 {
+  background-color: #fefafa;
+}
