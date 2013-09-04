@@ -28,7 +28,7 @@
 
   snakeLen = 18;
 
-  speed = 100;
+  speed = 300;
 
   speedLevel = "slow";
 
@@ -99,7 +99,7 @@
       $bottomRoad = $tblMap.find("tr").find("td:last").getRealRoad();
       $rightRoad = $.reverseDom($tblMap.find("tr:last>td")).getRealRoad();
       $topRoad = $.reverseDom($tblMap.find("tr").find("td:first")).getRealRoad();
-      this.$road = $.merge($.merge($.merge($leftRoad, $bottomRoad), $rightRoad), $topRoad);
+      this.$road = $.merge($.merge($.merge($leftRoad, $bottomRoad), $rightRoad), $topRoad).addClass("snake-road");
       len = snakeLen;
       this.collection = new Snake();
       while (len--) {

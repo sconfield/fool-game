@@ -1,4 +1,5 @@
-@blue: #C1DEE6;
+@map-color: #C1DEE6;
+@airplane-color: #2868C7;
 @tdHeight: 15px;
 @tdWeight: 15px;
 
@@ -9,7 +10,7 @@
 }
 
 body {
-  background-color: @blue;
+  background-color: @map-color;
 }
 
 // base map
@@ -20,12 +21,10 @@ body {
 
 .base-map tr {
   .base-map-td(17px);
-
 }
 
 .base-map td {
   width: @tdWeight;
-  background-color: @blue;
   .base-map-td;
 }
 
@@ -34,11 +33,28 @@ body {
   .base-map-td;
 }
 
+// airplane
+.airplane-matrix {
+  //background-color: #0BD48D;
+}
+
+.airplane {
+  background-color: #FFE724;
+}
+
+.ball {
+  background-color: #FF24DD;
+}
+
+// snake
 .snake {
   border: 1px solid greenyellow;
 }
 
-// snake
+.snake-road {
+  //background-color: #24FF89;
+}
+
 .item17 {
   background-color: #941c13;
 }

@@ -19,7 +19,7 @@
                         ~--______-~                ~-___-~
 ###
 snakeLen = 18
-speed = 100
+speed = 300
 speedLevel = "slow"
 map = "table.base-map>tbody"
 
@@ -53,7 +53,7 @@ class SnakeView extends Backbone.View
     $rightRoad = $.reverseDom($tblMap.find("tr:last>td")).getRealRoad()
     $topRoad = $.reverseDom($tblMap.find("tr").find("td:first")).getRealRoad()
     # 星光大道
-    @$road = $.merge($.merge($.merge($leftRoad, $bottomRoad), $rightRoad), $topRoad)
+    @$road = $.merge($.merge($.merge($leftRoad, $bottomRoad), $rightRoad), $topRoad).addClass "snake-road"
     # 蛇蛇从石头里蹦出来了
     len = snakeLen
     @collection = new Snake()

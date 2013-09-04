@@ -3,11 +3,13 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/javascripts/base.js" />
+        <item url="file://$PROJECT_DIR$/javascripts/airplane.js" />
         <item url="file://$PROJECT_DIR$/javascripts/snake.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/javascripts/base.js" />
+      <root url="file://$PROJECT_DIR$/javascripts/airplane.js" />
       <root url="file://$PROJECT_DIR$/javascripts/snake.js" />
     </CLASSES>
     <SOURCES />

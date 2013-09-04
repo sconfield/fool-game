@@ -4,11 +4,13 @@
     <list default="true" id="bd740ac1-196b-4bb5-b62d-1f117f5c9149" name="Default" comment="" />
     <ignored path="fool-game.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bd740ac1-196b-4bb5-b62d-1f117f5c9149" time="1378175840701" ignored="false" />
+    <file path="/Dummy.txt" changelist="bd740ac1-196b-4bb5-b62d-1f117f5c9149" time="1378304732239" ignored="false" />
     <file path="/a.coffee" changelist="bd740ac1-196b-4bb5-b62d-1f117f5c9149" time="1378128489936" ignored="false" />
-    <file path="/snake.coffee" changelist="bd740ac1-196b-4bb5-b62d-1f117f5c9149" time="1378178967443" ignored="false" />
-    <file path="/game.less" changelist="bd740ac1-196b-4bb5-b62d-1f117f5c9149" time="1378180813818" ignored="false" />
-    <file path="/base.coffee" changelist="bd740ac1-196b-4bb5-b62d-1f117f5c9149" time="1378177057825" ignored="false" />
+    <file path="/snake.coffee" changelist="bd740ac1-196b-4bb5-b62d-1f117f5c9149" time="1378305367955" ignored="false" />
+    <file path="/game.less" changelist="bd740ac1-196b-4bb5-b62d-1f117f5c9149" time="1378309202790" ignored="false" />
+    <file path="/base.coffee" changelist="bd740ac1-196b-4bb5-b62d-1f117f5c9149" time="1378296743419" ignored="false" />
+    <file path="/airplane.coffee" changelist="bd740ac1-196b-4bb5-b62d-1f117f5c9149" time="1378309914889" ignored="false" />
+    <file path="/index.html" changelist="bd740ac1-196b-4bb5-b62d-1f117f5c9149" time="1378309993102" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,37 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="24" selection-start="55" selection-end="56" vertical-scroll-proportion="-0.7307692">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="print.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stylesheets/print.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="67" selection-start="289" selection-end="289" vertical-scroll-proportion="-1.66">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pygment_trac.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stylesheets/pygment_trac.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="101" selection-start="506" selection-end="506" vertical-scroll-proportion="-1.66">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stylesheet.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stylesheets/stylesheet.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="50" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.22881356">
+            <state line="9" column="78" selection-start="564" selection-end="564" vertical-scroll-proportion="0.06761566">
               <folding />
             </state>
           </provider>
@@ -67,7 +42,7 @@
       <file leaf-file-name="base.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/base.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="8" selection-start="689" selection-end="689" vertical-scroll-proportion="-4.34">
+            <state line="17" column="9" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -76,7 +51,16 @@
       <file leaf-file-name="snake.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/snake.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="28" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0">
+            <state line="80" column="13" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="airplane.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascripts/airplane.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="45" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -85,7 +69,7 @@
       <file leaf-file-name="game.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stylesheets/game.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="44" selection-start="149" selection-end="149" vertical-scroll-proportion="-1.66">
+            <state line="46" column="22" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,12 +93,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/stylesheets/game.css" />
-        <option value="$PROJECT_DIR$/javascripts/snake.coffee" />
-        <option value="$PROJECT_DIR$/javascripts/base.coffee" />
-        <option value="$PROJECT_DIR$/stylesheets/game.less" />
         <option value="$PROJECT_DIR$/stylesheets/stylesheet.css" />
+        <option value="$PROJECT_DIR$/javascripts/base.coffee" />
+        <option value="$PROJECT_DIR$/javascripts/snake.coffee" />
+        <option value="$PROJECT_DIR$/stylesheets/game.less" />
+        <option value="$PROJECT_DIR$/javascripts/airplane.coffee" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -150,6 +135,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -196,15 +182,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fool-game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fool-game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="airplane.coffee" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="options.lastSelected" value="vcs.Git" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -340,20 +343,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stylesheets/game.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/snake.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="58" column="30" selection-start="1939" selection-end="1939" vertical-scroll-proportion="0.0">
@@ -385,63 +374,71 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/snake.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.7538996" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stylesheets/game.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="318" selection-end="318" vertical-scroll-proportion="0.6762712">
+        <state line="21" column="0" selection-start="318" selection-end="318" vertical-scroll-proportion="0.6762712" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheets/print.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="67" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheets/pygment_trac.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="101" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheets/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="50" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/snake.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/base.coffee">
+    <entry file="file://$PROJECT_DIR$/javascripts/airplane.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="8" selection-start="689" selection-end="689" vertical-scroll-proportion="-4.34">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/snake.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="28" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stylesheets/game.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="44" selection-start="149" selection-end="149" vertical-scroll-proportion="-1.66">
+        <state line="46" column="22" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/airplane.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="45" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/snake.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="13" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/base.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="9" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="55" selection-end="56" vertical-scroll-proportion="-0.7307692">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stylesheets/print.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="67" selection-start="289" selection-end="289" vertical-scroll-proportion="-1.66">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stylesheets/pygment_trac.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="101" selection-start="506" selection-end="506" vertical-scroll-proportion="-1.66">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stylesheets/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="50" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.22881356">
+        <state line="9" column="78" selection-start="564" selection-end="564" vertical-scroll-proportion="0.06761566">
           <folding />
         </state>
       </provider>

@@ -23,7 +23,7 @@
 
   tblWeight = 68;
 
-  tdHt = 30;
+  tdHt = 26;
 
   tdWt = 20;
 

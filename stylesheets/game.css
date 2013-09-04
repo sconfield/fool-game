@@ -12,7 +12,6 @@ body {
 }
 .base-map td {
   width: 15px;
-  background-color: #c1dee6;
   height: 15px;
   line-height: 15px;
   overflow: hidden;
@@ -22,6 +21,12 @@ body {
   height: 15px;
   line-height: 15px;
   overflow: hidden;
+}
+.airplane {
+  background-color: #FFE724;
+}
+.ball {
+  background-color: #FF24DD;
 }
 .snake {
   border: 1px solid greenyellow;
