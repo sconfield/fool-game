@@ -4,9 +4,8 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.min.css" media="screen" />
     <link type="text/css" rel="stylesheet" href="stylesheets/game.min.css">
     <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
@@ -24,10 +23,15 @@
 
   <body>
     <header>
-      <div class="inner">
-        <h1 title="不能打到蛇兄哦，它会生气的；也不能被方块砸中！">Fool-game</h1>
-        <h2>贪吃蛇围观飞机大战俄罗斯方块。原始table构建，兼容ie6+等各种浏览器。<a href="#">HTML5版本</a></h2>
-        <a href="https://github.com/sconfield/fool-game" class="button"><small>看这里(⊙o⊙)</small>GitHub</a>
+      <div class="content">
+          <h1>Fool-game</h1>
+          <a href="#" class="pure-button">HTML5版本</a>
+          <blockquote class="content-quote">
+            贪吃蛇围观飞机大战俄罗斯方块。原始table构建，兼容ie6+等各种浏览器。要小心，不能被方块砸中！你可以发射子弹，但是不能打到蛇兄哦，它会生气的！
+          </blockquote>
+          <a href="https://github.com/sconfield/fool-game" class="button"><small>看这里(⊙o⊙)</small>GitHub</a>
+          <div class="sprite sprite-say" style="float: left;"></div>
+          <div class="sprite sprite-about" style="float: right;"></div>
       </div>
     </header>
   </body>

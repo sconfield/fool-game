@@ -28,7 +28,7 @@
 
   snakeLen = 18;
 
-  speed = 300;
+  speed = 100;
 
   speedLevel = "slow";
 
