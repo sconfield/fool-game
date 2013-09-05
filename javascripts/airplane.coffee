@@ -79,7 +79,7 @@ class AirplaneView extends Backbone.View
 
 $(document).ready ->
   view = new AirplaneView()
-  $(window).keydown (e) ->
+  $(document).keydown (e) ->
     if e.keyCode is 37 # left
       if view.moveLeft "airplane-matrix" then view.moveLeft()
     else if e.keyCode is 39 # right

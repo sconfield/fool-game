@@ -152,7 +152,7 @@
   $(document).ready(function() {
     var view;
     view = new AirplaneView();
-    return $(window).keydown(function(e) {
+    return $(document).keydown(function(e) {
       if (e.keyCode === 37) {
         if (view.moveLeft("airplane-matrix")) {
           return view.moveLeft();
