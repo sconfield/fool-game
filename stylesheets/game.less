@@ -13,6 +13,18 @@ body {
   background-color: @map-color;
 }
 
+h1 {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+h1:hover {
+  background-color: #E6E6E6;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset;
+}
+
 .content .content-quote {
   font-family: "Georgia", serif;
   color: #666;
@@ -20,6 +32,33 @@ body {
   line-height: 1.8em;
   border-left: 5px solid #ddd;
   padding-left: 1.5em;
+}
+
+a.button {
+  width: 134px;
+  height: 58px;
+  line-height: 1.2;
+  font-size: 23px;
+  color: #fff;
+  padding-left: 68px;
+  padding-top: 22px;
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  position: absolute;
+  top: 10px;
+  background: transparent url(../images/github-button.png) 0 0 no-repeat;
+}
+
+a.button:hover {
+  border:dashed 6px #000000;
+  border-radius:17px;
+  -webkit-border-radius:17px;
+  -moz-border-radius: 17px;
+  background-color: #0078E7;
+}
+
+a.button small {
+  display: block;
+  font-size: 11px;
 }
 
 .stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
@@ -53,7 +92,6 @@ body {
   }
 }
 
-
 // base map
 .base-map {
   margin-left: auto;
@@ -81,10 +119,6 @@ body {
 
 .airplane {
   background-color: #FFE724;
-}
-
-.ball {
-  background-color: #FF24DD;
 }
 
 // snake

@@ -25,7 +25,7 @@
 
   tdHt = 26;
 
-  tdWt = 25;
+  tdWt = 22;
 
   $.fn.extend({
     createMap: function(height, weight) {

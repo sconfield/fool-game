@@ -12,11 +12,10 @@ map = "table.base-map>tbody"
 $.fn.extend
   forward: (i) ->
     $tr = $(@)
-    $ball = $tr.find("td:eq(#{i})>div").addClass("ball").css("visibility", "visible")
-    $ball.fadeOut 100, ->
-      $(@).removeClass().css("visibility", "hide")
+    $ball = $tr.find("td:eq(#{i})>div").addClass("sprite sprite-ball").css("visibility", "visible")
+    $ball.fadeOut 168, ->
+      $ball.css({"visibility":"hide","display":"block"}).removeClass()
       if $tr.prev()? then $tr.prev().forward(i)
-
 
 class Airplane extends Backbone.Model
   defaults: {

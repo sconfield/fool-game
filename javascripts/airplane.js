@@ -21,9 +21,12 @@
     forward: function(i) {
       var $ball, $tr;
       $tr = $(this);
-      $ball = $tr.find("td:eq(" + i + ")>div").addClass("ball").css("visibility", "visible");
-      return $ball.fadeOut(100, function() {
-        $(this).removeClass().css("visibility", "hide");
+      $ball = $tr.find("td:eq(" + i + ")>div").addClass("sprite sprite-ball").css("visibility", "visible");
+      return $ball.fadeOut(168, function() {
+        $ball.css({
+          "visibility": "hide",
+          "display": "block"
+        }).removeClass();
         if ($tr.prev() != null) {
           return $tr.prev().forward(i);
         }
